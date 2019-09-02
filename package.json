@@ -38,6 +38,7 @@
   },
   "dependencies": {
     "flickity": "^2.2.1",
+    "flickity-hash": "^1.0.3",
     "normalize.css": "^8.0.1"
   }
 }
