@@ -1,0 +1,18 @@
+
+.main-carousel {
+	height: 100%;
+}
+.carousel-cell {
+  	width: 100%;
+  	background-size: cover;
+  	margin: 10px;
+  	min-height: 250px; 	
+  	 
+}
+
+.container {
+	margin: 0 auto;
+	text-align: center;
+	width: 1200px;
+	
+}

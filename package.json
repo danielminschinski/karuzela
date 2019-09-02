@@ -35,5 +35,9 @@
     "nu-html-checker": "^0.1.0",
     "onchange": "^5.2.0",
     "rimraf": "^2.7.1"
+  },
+  "dependencies": {
+    "flickity": "^2.2.1",
+    "normalize.css": "^8.0.1"
   }
 }
