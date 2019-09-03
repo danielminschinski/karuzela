@@ -13,5 +13,5 @@ var flkty = new Flickity( elem, {
 //   for an individual element
 var flkty = new Flickity( '.main-carousel', {
   // options
-  
+  hash: true,
 });
