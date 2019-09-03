@@ -1,3 +1,9 @@
+* {
+    box-sizing: border-box;
+}
+.main-carousel {
+	position: relative;
+}
 
 .carousel-cell {
   	width: 100%;
@@ -15,38 +21,45 @@
 	text-align: center;
 	max-width: 1200px;
 	color: white;
-	font-size: 75px;
-	line-height: 50vh;
-	text-align: center;
-
 	
 }
 
-.button-group {
-		position: absolute;
-		top: 20px;
-		button {
-		background: black;
-		padding: 4px;
-		color: white;
-		border-radius: 3px;
-		transition: 0.3s;
-		&:hover {
-			background: white;
-			color: black;
-			}
-		}
+.container p {
+	font-size: 75px;
+	line-height: 35vh;
+	text-align: center;
 	}
+
+.button-group {
+	position: absolute;
+	top: 20px;
+}
+button {
+	background: blue;
+	padding: 4px;
+	color: white;
+	border-radius: 3px;
+	transition: 0.3s;
+}		
+
+&:hover {
+	background: white;
+	color: black;
+}
+		
+	
 
 .flickity-page-dots {
 	display: none;
-	.dot {
+}	
+.dot {
 	display: none;
-	}
 }
+
 
 .progress-bar {
 	height: 20px;
 	width: 0;
 	background: #333;
 }
+
