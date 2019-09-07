@@ -12,36 +12,17 @@
 
       <div class="main-carousel" data-flickity='{ "hash": true }'>
 
-  			<div class="carousel-cell" style="background-image: url(images/drizzle.jpg)" id="carousel-cell1">
-  				<div class="container">
-            <!--<script id="template-image-slide" type="x-tmpl-mustache">
-              <h1> {{ title }} </h1>
-              <p> {{{ description }}} </p>
-            </script>-->
-  					<p>1</p>
-  				</div>
-  			</div>
-  			<div class="carousel-cell" style="background-image: url(images/look-out.jpg)" id="carousel-cell2">
-  				<div class="container">
-  					<p>2</p>
-  				</div>
-  			</div>
-  			<div class="carousel-cell" style="background-image: url(images/orange-tree.jpg)" id="carousel-cell3">
-  				<div class="container">
-  					<p>3</p>
-  				</div>
-  			</div>
-  			<div class="carousel-cell" style="background-image: url(images/submerged.jpg)" id="carousel-cell4">
-  				<div class="container">
-  					<p>4</p>
-  				</div>
-  			</div>
-  	    <div class="carousel-cell" style="background-image: url(images/one-world-trade.jpg)" id="carousel-cell5">
-  				<div class="container">
-  					
-            <p>5</p>
-  				</div>
-  			</div>
+  			
+  				<script id="template-carousel-slide" type="x-tmpl-mustache">
+            <div class="carousel-cell">
+              <img src="{{image}}">
+                <div class="container">
+                  <h2>{{ title }}</h2>
+                  {{{ description }}}
+                </div>
+            </div>
+          </script>
+  
 		</div>
     <div class="button-group">
       <button class="button">Reset</button>
@@ -49,22 +30,46 @@
 
     <div class="progress-bar"></div>
 
-    <!--<script>
+   <script>
       var imageData = [
       {
-        image:
-        title:
-        description: "<p>Lorem ipsum.</p> <img src="http://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>"
+        image: "http://www.educenter-komorow.pl/images/fourththumb/jezioro-z-przepieknym-krajobrazem.jpeg",
+        title: "Picture 1"
+        description: "<p>Lorem ipsum.</p>"
       },
+      var imageData = [
+      {
+        image: "https://foksal17.pl/obraz/podglad/510/600/Galeria%20sztuki%20wspolczesnej%20warszawa%20obrazy%20malarstwo%20-%20krajobraz%20i-paulina%20szabra%20pejzaz-3786jpg.jpg",
+        title: "Picture 2"
+        description: "<p>Lorem ipsum.</p>"
+      },
+      var imageData = [
+      {
+        image: "http://jeremiaszgadek.pl/wp-content/uploads/2017/01/DJI_0226ST-960x636.jpg",
+        title: "Picture 3"
+        description: "<p>Lorem ipsum.</p>"
+      },
+      var imageData = [
+      {
+        image: "https://img.pixers.pics/pho_wat(s3:700/FO/39/97/57/95/700_FO39975795_320ec8f4ba8b73bf5a3536f1ab632d5f.jpg,700,452,cms:2018/10/5bd1b6b8d04b8_220x50-watermark.png,over,480,402,jpg)/fototapety-krajobraz-gorski-z-purpurowymi-kwiatami.jpg.jpg",
+        title: "Picture 4"
+        description: "<p>Lorem ipsum.</p>"
+      },
+      var imageData = [
+      {
+        image: "https://wmodn.olsztyn.pl/ocee/wp-content/uploads/2017/08/droga-1.jpg",
+        title: "Picture 5"
+        description: "<p>Lorem ipsum.</p>"
+      }
 
 
 
       ];
-    </script>-->
+    </script>
 
     <script src="vendor/flickity.pkgd.min.js"></script>
     <script src="vendor/hash.js"></script>  
-    <!--<script src="vendor/mustache.js"></script>-->
+    <script src="vendor/mustache.js"></script>
     <script src="js/script.js"></script>
       
     
