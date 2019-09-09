@@ -1,3 +1,30 @@
+'use strict';
+
+(function(){
+
+
+var templateSlide = document.getElementById('template-carousel-slide').innerHTML;
+
+Mustache.parse(templateSlide);
+
+var listSlide = '';
+
+for(var i = 0; i < carouselData.length; i++){
+  console.log(carouselData[i]);
+  listSlide += Mustache.render(templateSlide, carouselData[i]);
+}
+
+
+
+
+
+
+
+
+
+
+
+
 var elem = document.querySelector('.main-carousel');
 var flkty = new Flickity( elem, {
   // options
@@ -11,7 +38,7 @@ var flkty = new Flickity( elem, {
 //   for an individual element
 var flkty = new Flickity('.main-carousel')
   // options
-
+carousel.innerHTML += listSlide;
 var buttonGroup = document.querySelector('.button-group');
 var buttons = buttonGroup.querySelectorAll('.button');
 buttons = fizzyUIUtils.makeArray( buttons );
@@ -31,4 +58,17 @@ flkty.on( 'scroll', function( progress ) {
   progress = Math.max( 0, Math.min( 1, progress ) );
   progressBar.style.width = progress * 100 + '%';
 });
-  
+
+})();
+
+
+
+
+
+
+
+
+
+
+
+
