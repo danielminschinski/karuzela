@@ -9,36 +9,28 @@ Mustache.parse(templateSlide);
 
 var listSlide = '';
 
-for(var i = 0; i < carouselData.length; i++){
-  console.log(carouselData[i]);
-  listSlide += Mustache.render(templateSlide, carouselData[i]);
+for(var i = 0; i < imageData.length; i++){
+  console.log(imageData[i]);
+  listSlide += Mustache.render(templateSlide, imageData[i]);
 }
 
 
 
 
+var carousel = document.querySelector('.main-carousel');
 
+carousel.innerHTML += listSlide;
+  
 
-
-
-
-
-
-
-var elem = document.querySelector('.main-carousel');
-var flkty = new Flickity( elem, {
-  // options
+var flkty = new Flickity( carousel, {
   cellAlign: 'left',
   contain: true,
-    
-
+  imagesLoaded: true,
+  percentPosition: false,
+  hash: true,
 });
 
-// element argument can be a selector string
-//   for an individual element
-var flkty = new Flickity('.main-carousel')
-  // options
-carousel.innerHTML += listSlide;
+
 var buttonGroup = document.querySelector('.button-group');
 var buttons = buttonGroup.querySelectorAll('.button');
 buttons = fizzyUIUtils.makeArray( buttons );

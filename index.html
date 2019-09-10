@@ -10,25 +10,24 @@
     </head>
     <body>
 
-      <div class="main-carousel" data-flickity='{ "hash": true }'>
-
-  			
-  				<script id="template-carousel-slide" type="x-tmpl-mustache">
-            <div class="carousel-cell">
-              <img src="{{image}}">
-                <div class="container">
-                  <h2>{{ title }}</h2>
-                  {{{ description }}}
-                </div>
-            </div>
-          </script>
+      <div class="main-carousel" data-flickity='{ "hash": true }'>		
   
-		</div>
-    <div class="button-group">
+		  </div>
+      <div class="button-group">
       <button class="button">Reset</button>
-    </div>
+      </div>
 
-    <div class="progress-bar"></div>
+      <div class="progress-bar"></div>
+
+    <script id="template-carousel-slide" type="x-tmpl-mustache">
+      <div class="carousel-cell">
+        <img src="{{image}}">
+          <div class="container">
+            <h2>{{ title }}</h2>
+            {{{ description }}}
+          </div>
+      </div>
+    </script>
 
    <script>
       var imageData = [
