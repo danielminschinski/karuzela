@@ -10,62 +10,68 @@
     </head>
     <body>
 
-      <div class="main-carousel" data-flickity='{ "hash": true }'>		
-  
-		  </div>
+      <div class="main-carousel" id="print"></div>
+      
       <div class="button-group">
       <button class="button">Reset</button>
       </div>
 
       <div class="progress-bar"></div>
 
-    <script id="template-carousel-slide" type="x-tmpl-mustache">
-      <div class="carousel-cell">
-        <img src="{{image}}">
+      <script id="template-carousel-slide" type="x-tmpl-mustache">
+        <div class="carousel-cell" id=" {{ id }} " style="background-image: url(' {{ image }} ');"> 
           <div class="container">
-            <h2>{{ title }}</h2>
-            {{{ description }}}
+            <div class="text">
+              <h2>{{ title }}</h2>
+              {{{ description }}}
+            </div>
           </div>
-      </div>
-    </script>
-
+        </div>
+      </script>
+		    
+      
+      
+   
    <script>
       var imageData = [
       {
-        image: "http://www.educenter-komorow.pl/images/fourththumb/jezioro-z-przepieknym-krajobrazem.jpeg",
-        title: "Picture 1"
-        description: "<p>Lorem ipsum.</p>"
+        image: 'images/drizzle.jpg',
+        id: 'carousel-cell1',
+        title: 'Picture 1',
+        description: '<p>Lorem lorem.</p> <img src="http://via.placeholder.com/200x100" alt="Photo placeholder">',
       },
      
       {
-        image: "https://foksal17.pl/obraz/podglad/510/600/Galeria%20sztuki%20wspolczesnej%20warszawa%20obrazy%20malarstwo%20-%20krajobraz%20i-paulina%20szabra%20pejzaz-3786jpg.jpg",
-        title: "Picture 2"
-        description: "<p>Lorem ipsum.</p>"
+        image: 'images/look-out.jpg',
+        id: 'carousel-cell2',
+        title: 'Picture 2',
+        description: '<p>Lorem lorem.</p> <img src="http://via.placeholder.com/200x100" alt="Photo placeholder">',
       },
       
       {
-        image: "http://jeremiaszgadek.pl/wp-content/uploads/2017/01/DJI_0226ST-960x636.jpg",
-        title: "Picture 3"
-        description: "<p>Lorem ipsum.</p>"
+        image: 'images/one-world-trade.jpg',
+        id: 'carousel-cell3',
+        title: 'Picture 3',
+        description: '<p>Lorem lorem.</p> <img src="http://via.placeholder.com/200x100" alt="Photo placeholder">',
       },
       
       {
-        image: "https://img.pixers.pics/pho_wat(s3:700/FO/39/97/57/95/700_FO39975795_320ec8f4ba8b73bf5a3536f1ab632d5f.jpg,700,452,cms:2018/10/5bd1b6b8d04b8_220x50-watermark.png,over,480,402,jpg)/fototapety-krajobraz-gorski-z-purpurowymi-kwiatami.jpg.jpg",
-        title: "Picture 4"
-        description: "<p>Lorem ipsum.</p>"
+        image: 'images/orange-tree.jpg',
+        id: 'carousel-cell4',
+        title: 'Picture 4',
+        description: '<p>Lorem lorem.</p> <img src="http://via.placeholder.com/200x100" alt="Photo placeholder">',
       },
       
       {
-        image: "https://wmodn.olsztyn.pl/ocee/wp-content/uploads/2017/08/droga-1.jpg",
-        title: "Picture 5"
-        description: "<p>Lorem ipsum.</p>"
-      }
-
-
+        image: 'images/submerged.jpg',
+        title: 'Picture 5',
+        description: '<p>Lorem lorem.</p> <img src="http://via.placeholder.com/200x100" alt="Photo placeholder">',
+      },
 
       ];
     </script>
-
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="vendor/flickity.pkgd.min.js"></script>
     <script src="vendor/hash.js"></script>  
     <script src="vendor/mustache.js"></script>

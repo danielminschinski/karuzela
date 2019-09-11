@@ -1,66 +1,52 @@
-'use strict';
 
 (function(){
-
 
 var templateSlide = document.getElementById('template-carousel-slide').innerHTML;
 
 Mustache.parse(templateSlide);
 
-var listSlide = '';
+var slide = '';
+
 
 for(var i = 0; i < imageData.length; i++){
-  console.log(imageData[i]);
-  listSlide += Mustache.render(templateSlide, imageData[i]);
-}
-
-
-
-
-var carousel = document.querySelector('.main-carousel');
-
-carousel.innerHTML += listSlide;
-  
-
-var flkty = new Flickity( carousel, {
-  cellAlign: 'left',
-  contain: true,
-  imagesLoaded: true,
-  percentPosition: false,
-  hash: true,
-});
-
-
-var buttonGroup = document.querySelector('.button-group');
-var buttons = buttonGroup.querySelectorAll('.button');
-buttons = fizzyUIUtils.makeArray( buttons );
-
-buttonGroup.addEventListener( 'click', function( event ) {
-  // filter for button clicks
-  if ( !matchesSelector( event.target, '.button' ) ) {
-    return;
+    console.log(imageData);
+    slide += Mustache.render(templateSlide, imageData[i]);
   }
-  var index = buttons.indexOf( event.target );
-  flkty.select( index );
-});
 
-var progressBar = document.querySelector('.progress-bar')
 
-flkty.on( 'scroll', function( progress ) {
-  progress = Math.max( 0, Math.min( 1, progress ) );
-  progressBar.style.width = progress * 100 + '%';
-});
+var print = document.getElementById('print');
+
+print.insertAdjacentHTML('beforeend', slide);
+
 
 })();
 
 
+var elem = document.querySelector('.main-carousel');
+var flkty = new Flickity( elem, {
+  // options
+  cellAlign: 'left',
+  contain: true,
+  hash: true
+    
+
+});
+
+
+var restart = document.querySelector('.button');
+
+restart.addEventListener( 'click', function( event ) {
+    flkty.select( 0 );
+});
+  
 
 
 
+var $carousel = $('.main-carousel').flickity();
 
+var $progressBar = $('.progress-bar');
 
-
-
-
-
-
+$carousel.on( 'scroll.flickity', function( event, progress ) {
+  progress = Math.max( 0, Math.min( 1, progress ) );
+  $progressBar.width( progress * 100 + '%' );
+});
