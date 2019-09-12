@@ -40,11 +40,15 @@ button {
 	color: white;
 	border-radius: 3px;
 	transition: 0.3s;
-	&:hover {
-		background: white;
-		color: black;
-	}
-}		
+}
+
+button:hover {
+	background: white;
+	color: black;
+}
+
+
+
 	
 
 .flickity-page-dots {
