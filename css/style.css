@@ -1,21 +1,58 @@
-* { box-sizing: border-box; }
+* {
+    box-sizing: border-box;
+}
+.main-carousel {
+	position: relative;
+}
 
-.main-carousel { position: relative; }
+.carousel-cell {
+  	width: 100%;
+  	height: 50vh;
+  	background-size: cover;
+  	min-height: 250px; 	
+  	background-position: center; 	 
+}
 
-.carousel-cell { width: 100%; height: 50vh; background-size: cover; margin: 10px; min-height: 250px; background-position: center; }
+.container {
+	margin: 0 auto;
+	text-align: center;
+	max-width: 1200px;
+	color: white;	
+	p {
+		font-size: 75px;
+		line-height: 25vh;
+		text-align: center;
+	}
+}
 
-.container { margin: 0 auto; text-align: center; max-width: 1200px; color: white; }
 
-.container p { font-size: 75px; line-height: 35vh; text-align: center; }
 
-.button-group { position: absolute; top: 20px; }
+.button-group {
+	position: absolute;
+	top: 20px;
+	left: 20px;
+}
+button {
+	background: blue;
+	padding: 4px;
+	color: white;
+	border-radius: 3px;
+	transition: 0.3s;
+	&:hover {
+		background: white;
+		color: black;
+	}
+}
 
-button { background: blue; padding: 4px; color: white; border-radius: 3px; transition: 0.3s; }
+.flickity-page-dots {
+	display: none;
+}	
+.dot {
+	display: none;
+}
 
-button:hover { background: white; color: black; }
-
-.flickity-page-dots { display: none; }
-
-.dot { display: none; }
-
-.progress-bar { height: 20px; width: 0; background: #333; }
+.progress-bar {
+	height: 20px;
+	width: 0;
+	background: #333;
+}
