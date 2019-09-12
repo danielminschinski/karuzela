@@ -9,7 +9,6 @@ var slide = '';
 
 
 for(var i = 0; i < imageData.length; i++){
-    console.log(imageData);
     slide += Mustache.render(templateSlide, imageData[i]);
   }
 
