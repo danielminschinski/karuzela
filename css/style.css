@@ -1,6 +1,7 @@
 * {
     box-sizing: border-box;
 }
+
 .main-carousel {
 	position: relative;
 }
@@ -18,20 +19,20 @@
 	text-align: center;
 	max-width: 1200px;
 	color: white;	
-	p {
-		font-size: 75px;
-		line-height: 25vh;
-		text-align: center;
-	}
 }
 
-
+p {
+	font-size: 25px;
+	line-height: 10vh;
+	text-align: center;
+}
 
 .button-group {
 	position: absolute;
 	top: 20px;
 	left: 20px;
 }
+
 button {
 	background: blue;
 	padding: 4px;
@@ -47,6 +48,7 @@ button {
 .flickity-page-dots {
 	display: none;
 }	
+
 .dot {
 	display: none;
 }
