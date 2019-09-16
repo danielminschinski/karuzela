@@ -49,3 +49,13 @@ $carousel.on( 'scroll.flickity', function( event, progress ) {
   progress = Math.max( 0, Math.min( 1, progress ) );
   $progressBar.width( progress * 100 + '%' );
 });
+
+window.initMap = function() {
+  // The location of Uluru
+  var uluru = {lat: -25.344, lng: 131.036};
+  // The map, centered at Uluru
+  var map = new google.maps.Map(
+      document.getElementById('map'), {zoom: 4, center: uluru});
+  // The marker, positioned at Uluru
+  var marker = new google.maps.Marker({position: uluru, map: map});
+}
