@@ -57,11 +57,19 @@ window.initMap = function() {
   	document.getElementById('map'), {zoom: 4, center: gdansk});
 
   for(var i = 0; i < imageData.length; i++){
-  	if(key = 'coords'){
+  	
   		var location = imageData[i].coords;
-  		var marker = new google.maps.Marker({position: location, map: map});
+  		var marker = new google.maps.Marker({position: location, map: map, index: i});
+      
+      marker.addListener('click', function(){
+        flkty.select( this.index );
+      });
+      flkty.on( 'change', function( i ) {
+        var changeLocation = imageData[i].coords;
+        map.panTo(changeLocation);
+});
+
   	}
-  }
+  };
   
   
-};
