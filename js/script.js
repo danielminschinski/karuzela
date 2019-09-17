@@ -67,9 +67,8 @@ window.initMap = function() {
       flkty.on( 'change', function( i ) {
         var changeLocation = imageData[i].coords;
         map.panTo(changeLocation);
-});
-
-  	}
-  };
+      });
+  }
+};
   
   
